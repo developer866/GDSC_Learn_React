@@ -9,6 +9,8 @@ const [btnDisabled,setBtnDisabled] = useState(true)
 const [message, setMessage] = useState('')
 
 const handleTextChange =(e) => {
+  // This is a if statement that checks for the validity of the user input
+  // This can be easily done using react-form-dom
   if (text === "") {
     setBtnDisabled(true);
     setMessage(null);
@@ -22,6 +24,15 @@ const handleTextChange =(e) => {
   setText(e.target.value);
 };
 
+// 
+//   Here is something important to notice
+//   The card component was render as a normal html tag 
+//   instead of <card />
+//   It was rendered in this <card></card> format
+//   now the reason for this is because the card component was created already 
+//   and we want to craete other card to share smilar functionality so insteaded of creating 
+//   a new card component .......
+// 
   return (
     <Card>
       <form>
